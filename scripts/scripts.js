@@ -1,4 +1,6 @@
-window.onload=()=>{
+
+
+const Ejercicio =()=>{
     const enlaces = document.getElementsByTagName("a");
     const parrafos = document.getElementsByTagName("p");
     console.log(parrafos[0].tagName)
@@ -22,4 +24,7 @@ window.onload=()=>{
             
         }
     }
+    
 }
+
+window.onload=Ejercicio

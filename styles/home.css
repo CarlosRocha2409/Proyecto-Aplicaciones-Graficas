@@ -6,8 +6,6 @@ body {
 }
 
 header {
-
-  height: 600px;
   display: flex;
   flex-direction: column;
 }
@@ -20,6 +18,7 @@ header > .header-main {
   height: 100%;
   position: relative;
   padding: 0 20px;
+  height: 600px;
 }
 
 header > .header-main > .header-content {
@@ -104,6 +103,9 @@ nav {
   width: 100%;
 }
 
+.nav-dark-theme {
+  background-color: black;
+}
 nav > ul,
 .foot-nav {
   list-style-type: none;
@@ -126,47 +128,50 @@ nav > .navbar {
   width: 100%;
   padding: 0 20px;
 }
+
 nav > .logo-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar-item{
-position: relative;
-  
+.navbar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .subnav {
   display: none;
-  padding: 0;
-  
   position: absolute;
+  padding: 0;
 }
 
-.navbar:hover>.navbar-item:hover >.subnav,.subnav:hover{
+.navbar:hover > .navbar-item:hover > .subnav,
+.subnav:hover {
   display: block;
-  top: 20;
+  top: 100%;
   left: 0;
-  animation:  fadeIn 0.5s;
+  animation: fadeIn 0.5s;
   background-color: white;
 }
 
-.subnav-item{
+.subnav-item {
   list-style-type: none;
   padding: 10px 20px;
   transition: 0.5s;
   height: 100%;
 }
-.subnav-item> a{
+.subnav-item > a {
   color: #1f1f1f;
   font-size: 18px;
   transition: 0.5s;
 }
 
-.subnav-item:hover{
-  background-color:  #1f1f1f;
+.subnav-item:hover {
+  background-color: #1f1f1f;
 }
-.subnav-item:hover>a{
+.subnav-item:hover > a {
   color: white;
 }
 .main > .short-descriptions {
@@ -362,10 +367,12 @@ footer > .foot-donate > .foot-donate-content {
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;
-    transform: translate(0,+30px);
+  0% {
+    opacity: 0;
+    transform: translate(0, +30px);
   }
-  100% {opacity:1;
-    transform: translate(0,0);
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

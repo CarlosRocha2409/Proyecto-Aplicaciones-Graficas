@@ -1,9 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <title>Fundación Rama</title>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="./styles/vision.css">
+        <link rel="stylesheet" href="./styles/home.css"/>
     </head>
     <body>
 
@@ -32,7 +33,7 @@
                     </a>
                 </div>
             </div>
-            <nav>
+            <nav class="nav-dark-theme">
                 <a href="./index.html" class="logo-nav">
                     <img src="./assets/images/logo.png" alt="logo"/>
                     <span>RAMA</span>
@@ -43,10 +44,10 @@
                         <a class="navbar-link" href="#">Quienes Somos?</a>
                         <ul class="subnav">
                             <li class="subnav-item">
-                                <a href="./vision.html">Misión</a>
+                                <a href="./vision.html#Vision">Visión</a>
                             </li>
                             <li class="subnav-item">
-                                <a href="#">Misión</a>
+                                <a href="./vision.html#Mision">Misión</a>
                             </li>
                         </ul>
                     </li>
@@ -54,7 +55,7 @@
                         <a class="navbar-link" href="#">Descubre</a>
                         <ul class="subnav">
                             <li class="subnav-item">
-                                <a  href="#">Proyectos</a>
+                                <a  href="./proyectos.html">Proyectos</a>
                             </li>
                             <li class="subnav-item">
                                 <a  href="#">Testimonios</a>
@@ -77,9 +78,9 @@
             </nav>
         </header>
         <div class="main">
-            <section class="vision">
+            <section class="m-v" id="Vision">
                 <img src="./assets/images/v-lightbulb.png" alt="light bulb"/>
-                <div class="vision-content">
+                <div class="m-v-content">
                     <h1>Nuestra Visión</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus est ligula, at vehicula ligula eleifend at. Ut fringilla ultricies vehicula. Sed nec est eget turpis sodales tempor. Etiam eu placerat eros, congue lacinia dolor.</p>
                     <p>Morbi sodales mi ac massa posuere feugiat. Sed egestas rhoncus nisi. Duis velit erat, blandit gravida lacinia in, egestas at massa. Morbi semper hendrerit diam vitae fringilla. Curabitur in facilisis lacus. Nullam a eleifend felis. Nunc sit amet arcu aliquam, elementum velit eu, mollis lectus. Maecenas volutpat e</p>
@@ -93,28 +94,40 @@
                 </div>
             </section>
 
-            <section class="predictions">
-                <div class="prediction">
-                    <img src="./assets/images/v-watertap.png" alt="water tap"/>
-                    <span>Pronto no habra suficiente agua potable</span>
+            <section class="m-v" id="Mision" >
+                <div class="m-v-content">
+                    <h1>Nuestra Misión</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus est ligula, at vehicula ligula eleifend at. Ut fringilla ultricies vehicula. Sed nec est eget turpis sodales tempor. Etiam eu placerat eros, congue lacinia dolor.</p>
+                    <p>Morbi sodales mi ac massa posuere feugiat. Sed egestas rhoncus nisi. Duis velit erat, blandit gravida lacinia in, egestas at massa. Morbi semper hendrerit diam vitae fringilla. Curabitur in facilisis lacus. Nullam a eleifend felis. Nunc sit amet arcu aliquam, elementum velit eu, mollis lectus. Maecenas volutpat e</p>
                 </div>
-                <div class="prediction">
-                    <img src="./assets/images/v-ice.png" alt="cold"/>
-                    <span>Los polos se derretiran causando inundaciones</span>
-                </div>
-                <div class="prediction">
-                    <img src="./assets/images/v-toxic.png" alt="toxic"/>
-                    <span>Los niveles de contaminación podrian llegar a hacer la vida en la tierra poco sostenible</span>
-                </div>
-                <div class="prediction">
-                    <img src="./assets/images/v-pine.png" alt="water tap"/>
-                    <span>La tala de arboles generara gran perdida de vida silvestre</span>
-                </div>
+                <img src="./assets/images/v-objetivo.png" alt="light bulb"/>
             </section>
-            <section class="change"> 
-                <img src="./assets/images/v-change.png" alt="change"/>
-                <h1>Do the change</h1>
-                <a class="principal-button" href="#">Proyectos</a>
+
+            <section class="cambio">
+                <img src="./assets/images/v-arrows.png"/>
+                <h1>Haz el cambio</h1>
+                <a class="principal-button" href="#">Donar</a>
+            </section>
+            <section class="our-predictions">
+                <h1>Nuestras Predicciones</h1>
+                <div class="predictions">
+                    <div class="prediction">
+                        <img src="./assets/images/v-watertap.png" alt="water tap"/>
+                        <span>Pronto no habra suficiente agua potable</span>
+                    </div>
+                    <div class="prediction">
+                        <img src="./assets/images/v-ice.png" alt="cold"/>
+                        <span>Los polos se derretiran causando inundaciones</span>
+                    </div>
+                    <div class="prediction">
+                        <img src="./assets/images/v-toxic.png" alt="toxic"/>
+                        <span>Los niveles de contaminación podrian llegar a hacer la vida en la tierra poco sostenible</span>
+                    </div>
+                    <div class="prediction">
+                        <img src="./assets/images/v-pine.png" alt="water tap"/>
+                        <span>La tala de arboles generara gran perdida de vida silvestre</span>
+                    </div>
+                </div>
             </section>
             <footer>
                 <div class="foot-logo">

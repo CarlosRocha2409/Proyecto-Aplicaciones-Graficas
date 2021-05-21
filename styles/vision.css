@@ -46,12 +46,20 @@
   font-size: 25px;
 }
 
-.hands > .hands-content > h1 {
+.hands > .hands-content,
+.hands-clock > h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 70px;
   font-weight: bold;
   color: white;
   text-transform: uppercase;
+}
+
+.hands > .hands-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cambio {

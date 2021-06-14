@@ -51,6 +51,7 @@ header > .header-main > .header-content > h2 {
   font-size: 35px;
   font-weight: 300;
 }
+
 .principal-button {
   border: 2px solid #3bcf93;
   padding: 2px 20px;
@@ -193,7 +194,7 @@ nav > .logo-nav {
   align-items: flex-start;
   flex-direction: column;
   padding: 20px;
-  height: 150px;
+  height: 200px;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
@@ -381,5 +382,92 @@ footer > .foot-donate > .foot-donate-content {
   100% {
     opacity: 1;
     transform: translate(0, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.35s ease-in-out;
+    background-color: #000;
+  }
+
+  #mobile-nav .navbar-title {
+    height: 33px;
+  }
+
+  #mobile-nav .navbar-title,
+  #mobile-nav .navbar-title .logo-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile-nav .navbar-title .toggler-wrapper {
+    margin-right: 20px;
+    margin-bottom: -3px;
+  }
+
+  #mobile-nav .navbar-title .toggler-wrapper svg {
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  #mobile-nav .navbar-title img {
+    margin-right: 10px;
+    max-width: 30px;
+    height: auto;
+  }
+
+  #mobile-nav > .navbar,
+  #mobile-nav > .navbar ul {
+    display: block;
+  }
+
+  #mobile-nav .navbar {
+    height: calc(100vh - 33px);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    padding: 0;
+  }
+
+  #mobile-nav .navbar .navbar-item {
+    justify-content: left;
+    padding: 5px 0;
+    display: block;
+  }
+
+  #mobile-nav .navbar .navbar-item .navbar-link {
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+
+  #mobile-nav.visible .navbar {
+    max-height: 100vh;
+  }
+
+  #mobile-nav .subnav {
+    position: initial;
+    display: block;
+  }
+
+  #mobile-nav .navbar .subnav {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s ease;
+  }
+
+  #mobile-nav .navbar > .navbar-item > .navbar-link.visible ~ .subnav {
+    max-height: 100vh;
+  }
+
+  #mobile-nav .navbar:hover > .navbar-item:hover > .subnav,
+  #mobile-nav .subnav:hover {
+    background: transparent;
+    animation: none;
   }
 }

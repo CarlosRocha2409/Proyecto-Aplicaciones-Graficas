@@ -46,8 +46,11 @@ function mueveReloj() {
   minuto = momentoActual.getMinutes();
   segundo = momentoActual.getSeconds();
 
-  horaImprimible = hora + " : " + minuto + " : " + segundo;
+  horaImprimible = `${hora} : ${minuto} : ${segundo} AM`;
 
+  if (hora > 12) {
+    horaImprimible = `${hora - 12} : ${minuto} : ${segundo} PM`;
+  }
   console.log(horaImprimible);
 
   document.getElementById("reloj").innerHTML = horaImprimible;
@@ -58,3 +61,23 @@ function mueveReloj() {
 window.onload = () => {
   mueveReloj();
 };
+
+function toggleNav() {
+  const element = document.getElementById("mobile-nav");
+  if (element) {
+    if (element.className.split(" ").includes("visible"))
+      element.classList.remove("visible");
+    else element.classList.add("visible");
+  }
+}
+
+function toggleMenu(event) {
+  const { target } = event;
+  if (target) {
+    if (target.className.split(" ").includes("navbar-link")) {
+      if (target.className.split(" ").includes("visible"))
+        target.classList.remove("visible");
+      else target.classList.add("visible");
+    }
+  }
+}

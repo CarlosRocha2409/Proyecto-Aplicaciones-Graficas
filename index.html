@@ -3,11 +3,14 @@
     <head>
         <title>Fundación Rama</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./styles/grid-system.css"/>
         <link rel="stylesheet" href="./styles/home.css"/>
     </head>
     <body>
         <header>
-            <div class="nav-top">
+            <div class="nav-top d-flex d-sm-none d-md-flex ">
 
                 <div class="phone">
                     <a href="#">
@@ -32,11 +35,12 @@
                     </a>
                 </div>
             </div>
-           <div class="header-main" >
+           <div class="header-main">
             <video autoplay muted loop id="myVideo">
                 <source src="./assets/videos/h-bg.mp4" type="video/mp4">
             </video>
-            <nav>
+    
+            <nav class="d-none d-md-flex" id="main-nav">
                 <a href="./index.html" class="logo-nav">
                     <span>RAMA</span>
                     <img src="./assets/images/logo.png" alt="logo"/>
@@ -79,6 +83,53 @@
                     </li>
                 </ul>
             </nav>
+            <nav class="d-block d-md-none" id="mobile-nav">
+                <div class="navbar-title">
+                    <div class="toggler-wrapper d-block d-md-none" onclick="toggleNav()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/></svg>
+                    </div>
+                    <a href="./index.html" class="logo-nav">
+                        <img src="./assets/images/logo.png" alt="logo"/>
+                        <span>RAMA</span>
+                    </a>
+                </div>
+                <ul class="navbar">
+                    <li class="navbar-item" onclick="toggleMenu(event)">
+                        <a class="navbar-link" href="#">Quienes Somos?</a>
+                        <ul class="subnav">
+                            <li class="subnav-item">
+                                <a href="./vision.html#Vision">Visión</a>
+                            </li>
+                            <li class="subnav-item">
+                                <a href="./vision.html#Mision">Misión</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item" onclick="toggleMenu(event)">
+                        <a class="navbar-link" href="#">Descubre</a>
+                        <ul class="subnav">
+                            <li class="subnav-item">
+                                <a  href="./proyectos.html">Proyectos</a>
+                            </li>
+                            <li class="subnav-item">
+                                <a  href="#">Testimonios</a>
+                            </li>
+                            <li class="subnav-item">
+                                <a  href="#">Covid-19</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">Voluntariado</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./contact.html">Contacto</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="principal-button" href="#">Donar</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="header-content">
                 <h1>El futuro no es desechable</h1>
                 <h2>Haz el cambio ahora</h2>
@@ -87,8 +138,8 @@
            </div>
         </header>
         <div class="main">
-            <section class="short-descriptions">
-                <div class="short-description">
+            <section class="short-descriptions d-flex row ">
+                <div class="short-description col-sm-12 col-md-4">
                     <h3 id="mash3">We’ve been tackling poverty in communities to.</h3>
                     <a id="aprendermas" class="no-style-a"> Aprender mas 
                         <span>
@@ -96,7 +147,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="short-description">
+                <div class="short-description col-sm-12 col-md-4">
                     <h3>The great journey to end poverty for good begins with.</h3>
                     <a class="no-style-a"> Aprender mas 
                         <span>
@@ -104,7 +155,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="short-description">
+                <div class="short-description col-sm-12 col-md-4">
                     <h3>Join our community to help bring clean and safe drinking.</h3>
                     <a class="no-style-a"> Aprender mas 
                         <span>
@@ -115,20 +166,20 @@
             </section>
 
             <section class="short-about-us">
-                <div class="sau-title">
+                <div class="sau-title row row-center">
                     <h1>¿Quienes Somos?</h1>
                     <p>Somos una organización ambiental dedicada a la recaudación de fondos para la conservación del medio ambiente asi tambien como diversas causas sociales.</p>
                 </div>
-                <div class="sau-examples">
-                    <div class="sau-example">
+                <div class="sau-examples row row-center ">
+                    <div class="sau-example col-12 col-md-3 column-center">
                         <img src="./assets/images/h-trash.png" alt="basura"/>
                         <h3>Recolección de basura</h3>
                     </div>
-                    <div class="sau-example">
+                    <div class="sau-example col-12 col-md-3 column-center">
                         <img src="./assets/images/h-leafs.png" alt="basura"/>
                         <h3>Cuido Ambiental</h3>
                     </div>
-                    <div class="sau-example">
+                    <div class="sau-example col-12 col-md-3 column-center">
                         <img src="./assets/images/h-kids.png" alt="basura"/>
                         <h3>Ayuda a los necesitados</h3>
                     </div>
@@ -142,28 +193,28 @@
 
             <section class="our-values">
                 <h1>Nuestros valores</h1>
-                <div class="values">
-                    <div class="value">
+                <div class="values row row-center">
+                    <div class="value col-12 col-md-4">
                         <img src="./assets/images/h-recicle.png" alt="recicle"/>
                         <h3>Reciclaje</h3>
                     </div>
-                    <div class="value">
+                    <div class="value col-12 col-md-4">
                         <img src="./assets/images/h-factory.png" alt="recicle"/>
                         <h3>Reducir Contaminación</h3>
                     </div>
-                    <div class="value">
+                    <div class="value col-12 col-md-4">
                         <img src="./assets/images/h-trashbag.png" alt="trash"/>
                         <h3>Recolección de basura</h3>
                     </div>
-                    <div class="value">
+                    <div class="value col-12 col-md-4">
                         <img src="./assets/images/h-people.png" alt="people"/>
                         <h3>Ayudara gente necesitada</h3>
                     </div>
-                    <div class="value">
+                    <div class="value col-12 col-md-4">
                         <img src="./assets/images/h-megaphone.png" alt="campaign"/>
                         <h3>Campañas de concientización</h3>
                     </div>
-                    <div class="value">
+                    <div class="value col-12 col-md-4">
                         <img src="./assets/images/h-drops.png" alt="drops"/>
                         <h3>Ahorro de recursos</h3>
                     </div>
@@ -192,10 +243,16 @@
                
             </ul>
             <div class="foot-donate">
-                <div class="foot-donate-content">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.6374663647634!2d
+                -86.22629628536386!3d12.136938991407279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+                1s0x8f73fe7867ce5fad%3A0x842c4aeae5cf3cda!2sUniversidad%20Nacional%20de%20Ingenier%C3%ADa
+                %20(RUPAP)!5e0!3m2!1ses-419!2sni!4v1623650975459!5m2!1ses-419!2sni" 
+                width="75%" height="200" style="border:0; margin-bottom: 15px;" allowfullscreen="true" loading="lazy"
+                ></iframe>
+<!--                 <div class="foot-donate-content">
                     <img src="./assets/images/footer-help.png" alt="donate"/>
                     <h3>Dona a nuestra causa</h3>
-                </div>
+                </div> -->
                 <div class="socialmedia">
                     <a class="social-icon">
                         <img src="./assets/images/icon-facebook.png" alt="facebook"/>

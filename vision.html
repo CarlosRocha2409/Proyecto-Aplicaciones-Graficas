@@ -3,6 +3,8 @@
     <head>
         <title>Fundación Rama</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/grid-system.css"/>
         <link rel="stylesheet" href="./styles/vision.css">
         <link rel="stylesheet" href="./styles/home.css"/>
     </head>
@@ -78,34 +80,35 @@
             </nav>
         </header>
         <div class="main">
-            <section class="m-v" id="Vision">
-                <img src="./assets/images/v-lightbulb.png" alt="light bulb"/>
-                <div class="m-v-content">
+            <section class="m-v row" id="Vision">
+                <img class="col-12 col-md-4" src="./assets/images/v-lightbulb.png" alt="light bulb"/>
+                <div class="m-v-content col-12 col-md-8">
                     <h1>Nuestra Visión</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus est ligula, at vehicula ligula eleifend at. Ut fringilla ultricies vehicula. Sed nec est eget turpis sodales tempor. Etiam eu placerat eros, congue lacinia dolor.</p>
                     <p>Morbi sodales mi ac massa posuere feugiat. Sed egestas rhoncus nisi. Duis velit erat, blandit gravida lacinia in, egestas at massa. Morbi semper hendrerit diam vitae fringilla. Curabitur in facilisis lacus. Nullam a eleifend felis. Nunc sit amet arcu aliquam, elementum velit eu, mollis lectus. Maecenas volutpat e</p>
                 </div>
             </section>
-            <section class="hands">
-                <div class="hands-clock">
+            <section class="hands row row-center">
+                <div class="hands-clock col-12 col-md-5">
                     <img src="./assets/images/v-hands.png" alt="hands"/>
                     <h1 id="reloj" name="reloj"></h1>
                 </div>
-                <div class="hands-content">
+                <div class="hands-content col-12 col-md-7">
                     <h1>Hora de poner manos a la obra</h1>
                     <a class="principal-button" href="#">Voluntariado</a>    
                 </div>
             </section>
 
-            <section class="m-v" id="Mision" >
-                <div class="m-v-content">
+            <section class="m-v row" id="Mision" >
+                <div class="m-v-content col-12 col-md-8">
                     <h1>Nuestra Misión</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus est ligula, at vehicula ligula eleifend at. Ut fringilla ultricies vehicula. Sed nec est eget turpis sodales tempor. Etiam eu placerat eros, congue lacinia dolor.</p>
                     <p>Morbi sodales mi ac massa posuere feugiat. Sed egestas rhoncus nisi. Duis velit erat, blandit gravida lacinia in, egestas at massa. Morbi semper hendrerit diam vitae fringilla. Curabitur in facilisis lacus. Nullam a eleifend felis. Nunc sit amet arcu aliquam, elementum velit eu, mollis lectus. Maecenas volutpat e</p>
                 </div>
-                <img src="./assets/images/v-objetivo.png" alt="light bulb"/>
+                <img class="col-12 col-md-4" src="./assets/images/v-objetivo.png" alt="light bulb"/>
             </section>
 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d31206.87682154679!2d-86.26235769036631!3d12.121757200702868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d12.1056001!2d-86.26562009999999!4m5!1s0x8f73fe7867ce5fad%3A0x842c4aeae5cf3cda!2sUniversidad%20Nacional%20de%20Ingenier%C3%ADa%20(RUPAP)%2C%20Managua%2C%20Nicaragua!3m2!1d12.136939!2d-86.2241076!5e0!3m2!1ses-419!2sus!4v1623648704478!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <section class="cambio">
                 <img src="./assets/images/v-arrows.png"/>
                 <h1>Haz el cambio</h1>
@@ -155,10 +158,16 @@
                     </li>
                 </ul>
                 <div class="foot-donate">
-                    <div class="foot-donate-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.6374663647634!2d
+                    -86.22629628536386!3d12.136938991407279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+                    1s0x8f73fe7867ce5fad%3A0x842c4aeae5cf3cda!2sUniversidad%20Nacional%20de%20Ingenier%C3%ADa
+                    %20(RUPAP)!5e0!3m2!1ses-419!2sni!4v1623650975459!5m2!1ses-419!2sni" 
+                    width="75%" height="200" style="border:0; margin-bottom: 15px;" allowfullscreen="true" loading="lazy"
+                    ></iframe>
+    <!--                 <div class="foot-donate-content">
                         <img src="./assets/images/footer-help.png" alt="donate"/>
                         <h3>Dona a nuestra causa</h3>
-                    </div>
+                    </div> -->
                     <div class="socialmedia">
                         <a class="social-icon">
                             <img src="./assets/images/icon-facebook.png" alt="facebook"/>
@@ -178,4 +187,6 @@
             </footer>
         </div>
         <script src="./scripts/scripts.js"></script>
+        <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+
     </body>

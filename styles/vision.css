@@ -44,6 +44,7 @@
 }
 .hands > .hands-content > a {
   font-size: 25px;
+  width: 250px;
 }
 
 .hands > .hands-content,
@@ -117,7 +118,50 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .hands {
+    padding: 15px;
+  }
+
   .m-v > img {
     order: 2;
+  }
+  .m-v {
+    padding: 15px;
+  }
+
+  .m-v > .m-v-content > h1 {
+    text-align: center;
+  }
+
+  .hands > .hands-content {
+    padding: 15px;
+  }
+
+  .hands > .hands-content > h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .hands > .hands-clock > img {
+    width: 300px;
+  }
+
+  .hands > .hands-content,
+  .hands-clock > h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  .hands > .hands-content > a {
+    width: 100%;
+    text-align: center;
+  }
+  .our-predictions > .predictions > .prediction {
+    margin-bottom: 20px;
+  }
+
+  .our-predictions > h1 {
+    font-size: 40px;
+    text-align: center;
   }
 }

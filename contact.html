@@ -3,6 +3,9 @@
     <head>
         <title>Fundación Rama</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./styles/grid-system.css"/>
         <link rel="stylesheet" href="./styles/contact.css"/>
         <link rel="stylesheet" href="./styles/home.css"/>
     </head>
@@ -33,7 +36,7 @@
                     </a>
                 </div>
             </div>
-            <nav class="nav-dark-theme">
+            <nav class="nav-dark-theme d-none d-md-flex" id="main-nav">
                 <a href="./index.html" class="logo-nav">
                     <img src="./assets/images/logo.png" alt="logo"/>
                     <span>RAMA</span>
@@ -76,10 +79,57 @@
                     </li>
                 </ul>
             </nav>
+            <nav class="d-block d-md-none" id="mobile-nav">
+                <div class="navbar-title">
+                    <div class="toggler-wrapper d-block d-md-none" onclick="toggleNav()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/></svg>
+                    </div>
+                    <a href="./index.html" class="logo-nav">
+                        <img src="./assets/images/logo.png" alt="logo"/>
+                        <span>RAMA</span>
+                    </a>
+                </div>
+                <ul class="navbar">
+                    <li class="navbar-item" onclick="toggleMenu(event)">
+                        <a class="navbar-link" href="#">Quienes Somos?</a>
+                        <ul class="subnav">
+                            <li class="subnav-item">
+                                <a href="./vision.html#Vision">Visión</a>
+                            </li>
+                            <li class="subnav-item">
+                                <a href="./vision.html#Mision">Misión</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item" onclick="toggleMenu(event)">
+                        <a class="navbar-link" href="#">Descubre</a>
+                        <ul class="subnav">
+                            <li class="subnav-item">
+                                <a  href="./proyectos.html">Proyectos</a>
+                            </li>
+                            <li class="subnav-item">
+                                <a  href="#">Testimonios</a>
+                            </li>
+                            <li class="subnav-item">
+                                <a  href="#">Covid-19</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">Voluntariado</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./contact.html">Contacto</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="principal-button" href="#">Donar</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <div class="main">
-            <div class="contact">
-                <form id="contact-form">
+            <div class="contact row">
+                <form id="contact-form" class="col-12 col-md-6">
                     <h1>Contactenos</h1>
                     <div>
                         <input id="name" placeholder="Nombre"/>
@@ -95,7 +145,7 @@
                     </div>
                 </form>
                 
-                <div class="contact-info" > 
+                <div class="contact-info col-12 col-md-6"" > 
                     <h1>Informacion</h1>
                     <div class="general-info">
                         <div class="info">
@@ -131,12 +181,12 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="foot-logo">
+        <footer class="row">
+            <div class="foot-logo col-12 col-md-4">
                 <img src="./assets/images/logo.png" alt="foot-logo"/>
                 <h3>RAMA</h3>
             </div>
-            <ul class="foot-nav">
+            <ul class="foot-nav col-12 col-md-4">
                 <li class="foot-nav-item">
                     <a class="foot-nav-link" href="#">Inicio</a>
                 </li>
@@ -151,12 +201,9 @@
                 </li>
                
             </ul>
-            <div class="foot-donate">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.6374663647634!2d
-                -86.22629628536386!3d12.136938991407279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
-                1s0x8f73fe7867ce5fad%3A0x842c4aeae5cf3cda!2sUniversidad%20Nacional%20de%20Ingenier%C3%ADa
-                %20(RUPAP)!5e0!3m2!1ses-419!2sni!4v1623650975459!5m2!1ses-419!2sni" 
-                width="75%" height="200" style="border:0; margin-bottom: 15px;" allowfullscreen="true" loading="lazy"
+            <div class="foot-donate col-12 col-md-4">
+                <iframe id="map"
+                width="85%" height="300" style="border:0; margin-bottom: 15px;" allowfullscreen="true" loading="lazy"
                 ></iframe>
 <!--                 <div class="foot-donate-content">
                     <img src="./assets/images/footer-help.png" alt="donate"/>
@@ -179,6 +226,6 @@
                 </div>
             </div>
         </footer>
-        <script src="./scripts/formHelper.js"></script>
+        <script src="./scripts/scripts.js"></script>
     </body>
 </html>

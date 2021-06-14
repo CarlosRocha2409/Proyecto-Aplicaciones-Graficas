@@ -45,6 +45,7 @@ header > .header-main > .header-content > h2,
 header > .header-main > .header-content > h1 {
   color: white;
   margin: 0 0 20px 0;
+  text-align: center;
 }
 header > .header-main > .header-content > h2 {
   font-family: "Montserrat", sans-serif;
@@ -324,7 +325,7 @@ footer > .foot-donate {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  flex-grow: 100%;
 }
 
 footer > .foot-nav,
@@ -423,27 +424,37 @@ footer > .foot-donate > .foot-donate-content {
 
   #mobile-nav > .navbar,
   #mobile-nav > .navbar ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   #mobile-nav .navbar {
     height: calc(100vh - 33px);
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     transition: all 0.35s ease;
     padding: 0;
   }
-
-  #mobile-nav .navbar .navbar-item {
-    justify-content: left;
-    padding: 5px 0;
-    display: block;
+  #mobile-nav .navbar::-webkit-scrollbar {
+    width: 10px;
   }
 
+  #mobile-nav .navbar .navbar-item {
+    justify-content: center;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  #mobile-nav .navbar .navbar-item a {
+    font-size: 45px;
+  }
   #mobile-nav .navbar .navbar-item .navbar-link {
     width: 100%;
     display: block;
-    text-align: left;
+    text-align: center;
   }
 
   #mobile-nav.visible .navbar {
@@ -452,7 +463,23 @@ footer > .foot-donate > .foot-donate-content {
 
   #mobile-nav .subnav {
     position: initial;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mobile-nav .subnav > .subnav-item {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mobile-nav .subnav > .subnav-item > a {
+    font-size: 25px;
+    color: white;
   }
 
   #mobile-nav .navbar .subnav {
@@ -469,5 +496,32 @@ footer > .foot-donate > .foot-donate-content {
   #mobile-nav .subnav:hover {
     background: transparent;
     animation: none;
+  }
+
+  .short-about-us > .sau-title > p {
+    padding: 0 20px;
+  }
+
+  .personal-change > h1 {
+    font-size: 30px;
+  }
+
+  .personal-change {
+    padding: 0 20px;
+    height: 600px;
+  }
+
+  .our-values > h1 {
+    text-align: center;
+  }
+
+  footer > .foot-nav,
+  footer > .foot-donate {
+    border-left: none;
+    border-bottom: 3px solid white;
+    height: 100%;
+  }
+  footer > * {
+    padding: 15px;
   }
 }

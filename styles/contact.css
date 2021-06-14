@@ -97,3 +97,18 @@
   background-color: white;
   margin: 20px 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .main > .contact {
+    height: 900px;
+  }
+
+  .main > .contact {
+    padding: 10px;
+  }
+
+  .main > .contact > form > div > input,
+  .main > .contact > form > div > textarea {
+    width: 300px;
+  }
+}

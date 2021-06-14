@@ -57,3 +57,39 @@ header > .header-main > .header-content > h1 {
   font-size: 20px;
   font-weight: 300;
 }
+
+.project-card > .project-card-content > .principal-button {
+  width: 150px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .project-card > img {
+    order: 2;
+  }
+
+  .project-card > .project-card-content {
+    order: 1;
+  }
+
+  .project-card > .project-card-content > .principal-button {
+    width: 150px;
+    text-align: center;
+  }
+
+  header > .header-main > .header-content > h1 {
+    font-size: 70px !important;
+  }
+
+  header > .header-main > .header-content {
+    height: 400px;
+  }
+
+  header > .header-main {
+    height: 400px !important;
+  }
+
+  .project-card > .project-card-content > h2 {
+    font-size: 40px;
+  }
+}

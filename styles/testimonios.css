@@ -1,0 +1,128 @@
+.t-profile {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.main-testimonies {
+  margin: 0 !important;
+  padding: 10px;
+}
+
+.t-card {
+  padding: 20px !important;
+}
+.t-card > .card-text {
+  text-align: justify;
+}
+
+.t-carrousel {
+  height: 400px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-proyects {
+  overflow: hidden;
+}
+
+.t-unicef {
+  background-image: url(../assets/images/t-unicef-bg.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  padding: 200px;
+  text-align: center;
+}
+
+.t-unicef-ceo {
+  height: 500px;
+  padding: 20px;
+}
+
+.t-unicef > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.t-unicef-ceo h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.t-unicef-ceo h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+.t-unicef-ceo .t-ceo-sign {
+  width: 200px;
+  height: auto;
+  align-self: center;
+}
+
+.ceo-pic {
+  background-image: url(../assets/images/t-ceo-pic.png);
+  background-size: cover;
+  background-position: top;
+  height: 400px;
+}
+
+.t-unicef * {
+  color: white;
+}
+
+.t-unicef img {
+  width: 450px;
+  height: auto;
+}
+
+.t-unicef h2:nth-child(2) {
+  font-size: 90px;
+}
+
+.t-unicef h2:nth-child(3) {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  .t-unicef-ceo {
+    height: auto;
+    padding: 20px;
+  }
+  .ceo-pic {
+    height: 400px;
+  }
+  .main-testimonies {
+    margin: 0 !important;
+    padding: 10px;
+  }
+  .t-unicef-ceo {
+    margin: 0 !important;
+  }
+
+  .t-unicef {
+    padding: 20px;
+  }
+
+  .t-unicef h2:nth-child(2) {
+    font-size: 70px;
+  }
+
+  .t-unicef h2:nth-child(3) {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}

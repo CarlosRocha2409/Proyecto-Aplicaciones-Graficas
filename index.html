@@ -1,260 +1,375 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Fundación Rama</title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>Fundación Rama</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" href="./styles/grid-system.css"/>
-        <link rel="stylesheet" href="./styles/home.css"/>
-    </head>
-    <body>
-        <header>
-            <div class="nav-top d-flex d-sm-none d-md-flex ">
+    <link rel="stylesheet" href="./styles/grid-system.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
 
-                <div class="phone">
-                    <a href="#">
-                        <img src="./assets/images/icon-phone.png" alt="telefono"/>
-                        <p>22589186</p>
-                    </a>
-                </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-                <div class="socialmedia">
-                    <a class="social-icon">
-                        <img src="./assets/images/icon-facebook.png" alt="facebook"/>
-                    </a>
-                    <a class="social-icon">
-                        
-                        <img src="./assets/images/icon-twitter.png" alt="twitter" />
-                    </a>
-                    <a class="social-icon">
-                        <img src="./assets/images/icon-instagram.png"  alt="instagram"/>
-                    </a>
-                    <a class="social-icon">
-                        <img src="./assets/images/icon-whatsapp.png"  alt="Whatsapp"/>
-                    </a>
-                </div>
-            </div>
-           <div class="header-main">
-            <video autoplay muted loop id="myVideo">
-                <source src="./assets/videos/h-bg.mp4" type="video/mp4">
-            </video>
-    
-            <nav class="d-none d-md-flex" id="main-nav">
-                <a href="./index.html" class="logo-nav">
-                    <span>RAMA</span>
-                    <img src="./assets/images/logo.png" alt="logo"/>
-                </a>
-
-                <ul class="navbar">
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#">Quienes Somos?</a>
-                        <ul class="subnav">
-                            <li class="subnav-item">
-                                <a href="./vision.html#Vision">Visión</a>
-                            </li>
-                            <li class="subnav-item">
-                                <a href="./vision.html#Mision">Misión</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#">Descubre</a>
-                        <ul class="subnav">
-                            <li class="subnav-item">
-                                <a  href="./proyectos.html">Proyectos</a>
-                            </li>
-                            <li class="subnav-item">
-                                <a  href="#">Testimonios</a>
-                            </li>
-                            <li class="subnav-item">
-                                <a  href="#">Covid-19</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#">Voluntariado</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="./contact.html">Contacto</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="principal-button" href="#">Donar</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="d-block d-md-none" id="mobile-nav">
-                <div class="navbar-title">
-                    <div class="toggler-wrapper d-block d-md-none" onclick="toggleNav()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/></svg>
-                    </div>
-                    <a href="./index.html" class="logo-nav">
-                        <img src="./assets/images/logo.png" alt="logo"/>
-                        <span>RAMA</span>
-                    </a>
-                </div>
-                <ul class="navbar">
-                    <li class="navbar-item" onclick="toggleMenu(event)">
-                        <a class="navbar-link" href="#">Quienes Somos?</a>
-                        <ul class="subnav">
-                            <li class="subnav-item">
-                                <a href="./vision.html#Vision">Visión</a>
-                            </li>
-                            <li class="subnav-item">
-                                <a href="./vision.html#Mision">Misión</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="navbar-item" onclick="toggleMenu(event)">
-                        <a class="navbar-link" href="#">Descubre</a>
-                        <ul class="subnav">
-                            <li class="subnav-item">
-                                <a  href="./proyectos.html">Proyectos</a>
-                            </li>
-                            <li class="subnav-item">
-                                <a  href="#">Testimonios</a>
-                            </li>
-                            <li class="subnav-item">
-                                <a  href="#">Covid-19</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#">Voluntariado</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="./contact.html">Contacto</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="principal-button" href="#">Donar</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-content">
-                <h1>El futuro no es desechable</h1>
-                <h2>Haz el cambio ahora</h2>
-                <a class="principal-button" href="#">Voluntariado</a>
-            </div>
-           </div>
-        </header>
-        <div class="main">
-            <section class="short-descriptions d-flex row ">
-                <div class="short-description col-sm-12 col-md-4">
-                    <h3 id="mash3">We’ve been tackling poverty in communities to.</h3>
-                    <a id="aprendermas" class="no-style-a"> Aprender mas</a>
-                </div>
-                <div class="short-description col-sm-12 col-md-4">
-                    <h3>The great journey to end poverty for good begins with.</h3>
-                    <a class="no-style-a"> Aprender mas</a>
-                </div>
-                <div class="short-description col-sm-12 col-md-4">
-                    <h3>Join our community to help bring clean and safe drinking.</h3>
-                    <a class="no-style-a"> Aprender mas</a>
-                </div>
-            </section>
-
-            <section class="short-about-us">
-                <div class="sau-title row row-center">
-                    <h1>¿Quienes Somos?</h1>
-                    <p>Somos una organización ambiental dedicada a la recaudación de fondos para la conservación del medio ambiente asi tambien como diversas causas sociales.</p>
-                </div>
-                <div class="sau-examples row row-center ">
-                    <div class="sau-example col-12 col-md-3 column-center">
-                        <img src="./assets/images/h-trash.png" alt="basura"/>
-                        <h3>Recolección de basura</h3>
-                    </div>
-                    <div class="sau-example col-12 col-md-3 column-center">
-                        <img src="./assets/images/h-leafs.png" alt="basura"/>
-                        <h3>Cuido Ambiental</h3>
-                    </div>
-                    <div class="sau-example col-12 col-md-3 column-center">
-                        <img src="./assets/images/h-kids.png" alt="basura"/>
-                        <h3>Ayuda a los necesitados</h3>
-                    </div>
-                </div>
-            </section>
-            <section class="personal-change">
-                <h1>EL CAMBIO COMIENZA INDIVIDUAL</h1>
-                <img src="./assets/images/h-leaf.png" alt="hoja"/>
-                <a class="principal-button" href="#">Proyectos</a>
-            </section>
-
-            <section class="our-values">
-                <h1>Nuestros valores</h1>
-                <div class="values row row-center">
-                    <div class="value col-12 col-md-4">
-                        <img src="./assets/images/h-recicle.png" alt="recicle"/>
-                        <h3>Reciclaje</h3>
-                    </div>
-                    <div class="value col-12 col-md-4">
-                        <img src="./assets/images/h-factory.png" alt="recicle"/>
-                        <h3>Reducir Contaminación</h3>
-                    </div>
-                    <div class="value col-12 col-md-4">
-                        <img src="./assets/images/h-trashbag.png" alt="trash"/>
-                        <h3>Recolección de basura</h3>
-                    </div>
-                    <div class="value col-12 col-md-4">
-                        <img src="./assets/images/h-people.png" alt="people"/>
-                        <h3>Ayudara gente necesitada</h3>
-                    </div>
-                    <div class="value col-12 col-md-4">
-                        <img src="./assets/images/h-megaphone.png" alt="campaign"/>
-                        <h3>Campañas de concientización</h3>
-                    </div>
-                    <div class="value col-12 col-md-4">
-                        <img src="./assets/images/h-drops.png" alt="drops"/>
-                        <h3>Ahorro de recursos</h3>
-                    </div>
-                </div>
-            </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-top d-flex d-sm-none d-md-flex">
+        <div class="phone">
+          <a href="#">
+            <img src="./assets/images/icon-phone.png" alt="telefono" />
+            <p>22589186</p>
+          </a>
         </div>
 
-        <footer class="row">
-            <div class="foot-logo col-12 col-md-4">
-                <img src="./assets/images/logo.png" alt="foot-logo"/>
-                <h3>RAMA</h3>
+        <div class="socialmedia">
+          <a class="social-icon">
+            <img src="./assets/images/icon-facebook.png" alt="facebook" />
+          </a>
+          <a class="social-icon">
+            <img src="./assets/images/icon-twitter.png" alt="twitter" />
+          </a>
+          <a class="social-icon">
+            <img src="./assets/images/icon-instagram.png" alt="instagram" />
+          </a>
+          <a class="social-icon">
+            <img src="./assets/images/icon-whatsapp.png" alt="Whatsapp" />
+          </a>
+        </div>
+      </div>
+      <div class="header-main">
+        <video autoplay muted loop id="myVideo">
+          <source src="./assets/videos/h-bg.mp4" type="video/mp4" />
+        </video>
+
+        <nav class="d-none d-md-flex" id="main-nav">
+          <a href="./index.html" class="logo-nav">
+            <span>RAMA</span>
+            <img src="./assets/images/logo.png" alt="logo" />
+          </a>
+
+          <ul class="navbar">
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">Quienes Somos?</a>
+              <ul class="subnav">
+                <li class="subnav-item">
+                  <a href="./vision.html#Vision">Visión</a>
+                </li>
+                <li class="subnav-item">
+                  <a href="./vision.html#Mision">Misión</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">Descubre</a>
+              <ul class="subnav">
+                <li class="subnav-item">
+                  <a href="./proyectos.html">Proyectos</a>
+                </li>
+                <li class="subnav-item">
+                  <a href="./testimonios.html">Testimonios</a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="./voluntary.html">Voluntariado</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="./contact.html">Contacto</a>
+            </li>
+            <li class="navbar-item">
+              <a
+                class="principal-button"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Donar</a
+              >
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel"
+                        >Dona para construir una Nicaragua mas limpia!</h5
+                      >
+
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="row g-3 needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="name@example.com"
+                            required
+                          />
+                          <label for="floatingInput">Nombre Completo</label>
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input
+                              class="form-control"
+                              id="floatingInput"
+                              type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"
+                              required
+                            />
+                            <label for="floatingInput">Numero de tarjeta </label>
+                            <div class="valid-feedback"> Looks good! </div>
+                          </div>
+
+                        <div class="row g-3">
+                        
+                            <div class="col-md-5 form-floating">
+                              <input
+                                class="form-control"
+                                id="floatingInput"
+                                placeholder="name@example.com"
+                                type="tel" pattern="\d*" maxlength="3"  required
+                              />
+                              <label for="floatingInput">CV</label>
+                              <div class="valid-feedback"> Looks good! </div>
+                            </div>
+                            <div class="col-md-5 form-floating">
+                              <input
+                                class="form-control"
+                                id="floatingInput"
+                                placeholder="name@example.com"
+                                type="tel" pattern="\d*" maxlength="4"  required
+                              />
+                              <label for="floatingInput">Fecha de expiración</label>
+                              <div class="valid-feedback"> Looks good! </div>
+                            </div>
+                              
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                              type="submit"
+                              class="btn btn-secondary"
+                              
+                              >Enviar</button
+                            >
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="d-block d-md-none" id="mobile-nav">
+          <div class="navbar-title">
+            <div
+              class="toggler-wrapper d-block d-md-none"
+              onclick="toggleNav()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 18c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-9c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"
+                />
+              </svg>
             </div>
-            <ul class="foot-nav col-12 col-md-4">
-                <li class="foot-nav-item">
-                    <a class="foot-nav-link" href="#">Inicio</a>
+            <a href="./index.html" class="logo-nav">
+              <img src="./assets/images/logo.png" alt="logo" />
+              <span>RAMA</span>
+            </a>
+          </div>
+          <ul class="navbar">
+            <li class="navbar-item" onclick="toggleMenu(event)">
+              <a class="navbar-link" href="#">Quienes Somos?</a>
+              <ul class="subnav">
+                <li class="subnav-item">
+                  <a href="./vision.html#Vision">Visión</a>
                 </li>
-                <li class="foot-nav-item">
-                    <a class="foot-nav-link" href="#">Proyectos</a>
+                <li class="subnav-item">
+                  <a href="./vision.html#Mision">Misión</a>
                 </li>
-                <li class="foot-nav-item">
-                    <a class="foot-nav-link" href="#">Nosotros</a>
+              </ul>
+            </li>
+            <li class="navbar-item" onclick="toggleMenu(event)">
+              <a class="navbar-link" href="#">Descubre</a>
+              <ul class="subnav">
+                <li class="subnav-item">
+                  <a href="./proyectos.html">Proyectos</a>
                 </li>
-                <li class="foot-nav-item">
-                    <a class="foot-nav-link" href="#">Contactos</a>
+                <li class="subnav-item">
+                                    <a href="./testimonios.html">Testimonios</a>
+
                 </li>
-               
-            </ul>
-            <div class="foot-donate col-12 col-md-4">
-                <iframe id="map"
-                width="85%" height="300" style="border:0; margin-bottom: 15px;" allowfullscreen="true" loading="lazy"
-                ></iframe>
-<!--                 <div class="foot-donate-content">
+
+              </ul>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="./voluntary.html">Voluntariado</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="./contact.html">Contacto</a>
+            </li>
+            <li class="navbar-item">
+              <a class="principal-button" href="#">Donar</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-content">
+          <h1>El futuro no es desechable</h1>
+          <h2>Haz el cambio ahora</h2>
+          <a class="principal-button" href="#">Voluntariado</a>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <section class="short-descriptions d-flex row">
+        <div class="short-description col-sm-12 col-md-4">
+          <h3 id="mash3">We’ve been tackling poverty in communities to.</h3>
+          <a id="aprendermas" class="no-style-a"> Aprender mas</a>
+        </div>
+        <div class="short-description col-sm-12 col-md-4">
+          <h3>The great journey to end poverty for good begins with.</h3>
+          <a class="no-style-a"> Aprender mas</a>
+        </div>
+        <div class="short-description col-sm-12 col-md-4">
+          <h3>Join our community to help bring clean and safe drinking.</h3>
+          <a class="no-style-a"> Aprender mas</a>
+        </div>
+      </section>
+
+      <section class="short-about-us">
+        <div class="sau-title row row-center">
+          <h1>¿Quienes Somos?</h1>
+          <p
+            >Somos una organización ambiental dedicada a la recaudación de
+            fondos para la conservación del medio ambiente asi tambien como
+            diversas causas sociales.</p
+          >
+        </div>
+        <div class="sau-examples row row-center">
+          <div class="sau-example col-12 col-md-3 column-center">
+            <img src="./assets/images/h-trash.png" alt="basura" />
+            <h3>Recolección de basura</h3>
+          </div>
+          <div class="sau-example col-12 col-md-3 column-center">
+            <img src="./assets/images/h-leafs.png" alt="basura" />
+            <h3>Cuido Ambiental</h3>
+          </div>
+          <div class="sau-example col-12 col-md-3 column-center">
+            <img src="./assets/images/h-kids.png" alt="basura" />
+            <h3>Ayuda a los necesitados</h3>
+          </div>
+        </div>
+      </section>
+      <section class="personal-change">
+        <h1>EL CAMBIO COMIENZA INDIVIDUAL</h1>
+        <img src="./assets/images/h-leaf.png" alt="hoja" />
+        <a class="principal-button" href="#">Proyectos</a>
+      </section>
+
+      <section class="our-values">
+        <h1>Nuestros valores</h1>
+        <div class="values row row-center">
+          <div class="value col-12 col-md-4">
+            <img src="./assets/images/h-recicle.png" alt="recicle" />
+            <h3>Reciclaje</h3>
+          </div>
+          <div class="value col-12 col-md-4">
+            <img src="./assets/images/h-factory.png" alt="recicle" />
+            <h3>Reducir Contaminación</h3>
+          </div>
+          <div class="value col-12 col-md-4">
+            <img src="./assets/images/h-trashbag.png" alt="trash" />
+            <h3>Recolección de basura</h3>
+          </div>
+          <div class="value col-12 col-md-4">
+            <img src="./assets/images/h-people.png" alt="people" />
+            <h3>Ayudara gente necesitada</h3>
+          </div>
+          <div class="value col-12 col-md-4">
+            <img src="./assets/images/h-megaphone.png" alt="campaign" />
+            <h3>Campañas de concientización</h3>
+          </div>
+          <div class="value col-12 col-md-4">
+            <img src="./assets/images/h-drops.png" alt="drops" />
+            <h3>Ahorro de recursos</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="row">
+      <div class="foot-logo col-12 col-md-4">
+        <img src="./assets/images/logo.png" alt="foot-logo" />
+        <h3>RAMA</h3>
+      </div>
+      <ul class="foot-nav col-12 col-md-4">
+        <li class="foot-nav-item">
+          <a class="foot-nav-link" href="#">Inicio</a>
+        </li>
+        <li class="foot-nav-item">
+          <a class="foot-nav-link" href="#">Proyectos</a>
+        </li>
+        <li class="foot-nav-item">
+          <a class="foot-nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="foot-nav-item">
+          <a class="foot-nav-link" href="#">Contactos</a>
+        </li>
+      </ul>
+      <div class="foot-donate col-12 col-md-4">
+        <iframe
+          id="map"
+          width="85%"
+          height="300"
+          style="border: 0; margin-bottom: 15px"
+          allowfullscreen="true"
+          loading="lazy"
+        ></iframe>
+        <!--                 <div class="foot-donate-content">
                     <img src="./assets/images/footer-help.png" alt="donate"/>
                     <h3>Dona a nuestra causa</h3>
                 </div> -->
-                <div class="socialmedia">
-                    <a class="social-icon">
-                        <img src="./assets/images/icon-facebook.png" alt="facebook"/>
-                    </a>
-                    <a class="social-icon">
-                        
-                        <img src="./assets/images/icon-twitter.png" alt="twitter" />
-                    </a>
-                    <a class="social-icon">
-                        <img src="./assets/images/icon-instagram.png"  alt="instagram"/>
-                    </a>
-                    <a class="social-icon">
-                        <img src="./assets/images/icon-whatsapp.png"  alt="Whatsapp"/>
-                    </a>
-                </div>
-            </div>
-        </footer>
-        <script src="./scripts/scripts.js"></script>
-    </body>
+        <div class="socialmedia">
+          <a class="social-icon">
+            <img src="./assets/images/icon-facebook.png" alt="facebook" />
+          </a>
+          <a class="social-icon">
+            <img src="./assets/images/icon-twitter.png" alt="twitter" />
+          </a>
+          <a class="social-icon">
+            <img src="./assets/images/icon-instagram.png" alt="instagram" />
+          </a>
+          <a class="social-icon">
+            <img src="./assets/images/icon-whatsapp.png" alt="Whatsapp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./scripts/scripts.js"></script>
+  </body>
 </html>
